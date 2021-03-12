@@ -3,14 +3,16 @@ import React, { useState } from 'react';
 import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
 
 export default function App() {
+  // Identifikasi React Hook
   const [enteredGoal, setEnteredGoal] = useState('');
-
   const [courseGoals, setCourseGoals] = useState([]);
 
+  // Input Handler
   const goalInputeHandler = (enteredText) => {
     setEnteredGoal(enteredText);
   };
 
+  // Show Data Handler
   const addGoalHandler = () => {
     setCourseGoals(currentGoals => [...currentGoals, enteredGoal]);
   };
